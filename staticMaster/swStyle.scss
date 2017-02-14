@@ -1,9 +1,13 @@
+@import 'shared';
+
+
 body {
   margin: 0px;
   padding: 0px;
   line-height: 1;
   font-family: Arial;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .wrapper {
   width: 1024px;
@@ -12,37 +16,42 @@ body {
   clear: both;
   position: relative;
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+}
 
 header {
   width: calc(100% - 2px);
   line-height: 2.5em;
   text-align: center;
   flex: 1 100%;
-  border: 1px solid #ff0000; }
-
+  border: $border--red;
+}
 ul {
   margin: 0px;
   padding: 0px;
-  list-style: none; }
-
+  list-style: none;
+}
 h1 {
   font-size: 5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .letters {
   width: 10%;
   flex: 1;
+  // order: 1;
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+}
 
 .letter {
   width: 100%;
   font-size: 1em;
   line-height: 2em;
-  border-bottom: 1px solid #000000;
-  border-left: 1px solid #000000;
-  text-align: center; }
+  border-bottom: $border--black;
+  border-left: $border--black;
+  text-align: center;
+}
 
 .mainSection {
   width: calc(90% - 2px);
@@ -55,20 +64,23 @@ h1 {
   flex-flow: row wrap;
   -webkit-align-content: flex-start;
   align-content: flex-start;
-  border-right: 1px solid #ff0000;
-  border-bottom: 1px solid #ff0000;
-  border-left: 1px solid #ff0000; }
+  border-right: $border--red;
+  border-bottom: $border--red;
+  border-left: $border--red;
+
+}
 
 .letterHead {
   flex: 1 100%;
   width: 100%;
   min-height: auto;
   display: table;
-  border-bottom: 1px solid #000000;
+  border-bottom: $border--black;
   text-align: center;
   font-size: 3em;
   line-height: 2.05em;
-  font: 200; }
+  font: 200;
+}
 
 .singleWord {
   width: 100%;
@@ -79,18 +91,20 @@ h1 {
   display: table-row;
   display: flex;
   flex-flow: row wrap;
-  border-bottom: 1px solid #000000; }
+  border-bottom: $border--black;
+}
+
 
 .originalWord {
   width: calc(25% - 2px);
   display: table;
   font-size: 1.5em;
-  line-height: 2.5em; }
+  line-height: 2.5em;
+}
 
 .translation {
   width: calc(75% - 2px);
   display: table;
   font-size: 1.5em;
-  line-height: 2.5em; }
-
-/*# sourceMappingURL=swStyle.css.map */
+  line-height: 2.5em;
+}
