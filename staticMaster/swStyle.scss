@@ -38,7 +38,7 @@ h1 {
   color: blue;
   @media #{$maxima} {
     font-size: 6em;
-    color: green;
+    color: $blue;
   }
 }
 
