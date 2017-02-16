@@ -6,7 +6,8 @@ body {
   font-size: 16px; }
 
 .wrapper {
-  width: 1024px;
+  width: 90%;
+  max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
   clear: both;
@@ -27,8 +28,13 @@ ul {
   list-style: none; }
 
 h1 {
-  font-size: 5em;
-  font-weight: 400; }
+  font-size: 10vw;
+  font-weight: 400;
+  color: blue; }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 6em;
+      color: green; } }
 
 .letters {
   width: 10%;

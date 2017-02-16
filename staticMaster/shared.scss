@@ -1,7 +1,13 @@
 // COLORS:
 $red: #ff0000;
 $black: #000000;
+$blue: #0000ff;
 
 // BORDERS:
 $border--red: 1px solid $red;
 $border--black: 1px solid $black;
+
+// BREACKPOINT
+
+$minima: '(max-width: 600px)';
+$maxima: '(min-width: 1024px)';
