@@ -118,7 +118,7 @@ h1 {
   padding: 0 0 0 15px;
   box-sizing: border-box;
   @include breakpoint(desktop) {
-    width: 25%;
+    min-width: 25%;
     border: none;
     padding: 0 0 0 15px;
     font-size: 1.5em;
@@ -132,7 +132,7 @@ h1 {
   font-style: italic;
   color: $midGray;
   @include breakpoint(desktop) {
-    width: 75%;
+    min-width: 75%;
     font-size: 1em;
     border-left: 1px solid $midGray;
   }
