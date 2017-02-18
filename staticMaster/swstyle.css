@@ -31,16 +31,19 @@ h1 {
   font-size: 10vw;
   font-weight: 400;
   color: blue; }
-  @media (min-width: 1024px) {
+  @media (min-width: 64em) {
     h1 {
       font-size: 6em;
-      color: green; } }
+      color: #0000ff; } }
 
 .letters {
-  width: 10%;
-  flex: 1;
-  padding: 0px;
-  margin: 0px; }
+  width: 20%; }
+  @media (min-width: 64em) {
+    .letters {
+      width: 10%;
+      flex: 1;
+      padding: 0px;
+      margin: 0px; } }
 
 .letter {
   width: 100%;
@@ -50,8 +53,13 @@ h1 {
   border-left: 1px solid #000000;
   text-align: center; }
 
+.letter:hover {
+  font-size: 2em;
+  font-weight: 900; }
+
 .mainSection {
-  width: calc(90% - 2px);
+  width: 80%;
+  box-sizing: border-box;
   order: 2;
   display: -webkit-flex;
   display: flex;
@@ -64,6 +72,9 @@ h1 {
   border-right: 1px solid #ff0000;
   border-bottom: 1px solid #ff0000;
   border-left: 1px solid #ff0000; }
+  @media (min-width: 64em) {
+    .mainSection {
+      width: 90%; } }
 
 .letterHead {
   flex: 1 100%;
@@ -78,25 +89,37 @@ h1 {
 
 .singleWord {
   width: 100%;
-  min-height: 4.05em;
+  min-height: 1em;
   flex: 1 100%;
   width: 100%;
   order: 2;
   display: table-row;
   display: flex;
   flex-flow: row wrap;
+  line-height: 2.5em;
   border-bottom: 1px solid #000000; }
 
 .originalWord {
-  width: calc(25% - 2px);
-  display: table;
-  font-size: 1.5em;
-  line-height: 2.5em; }
+  border-bottom: 1px solid #d0d0d0;
+  width: 100%;
+  padding: 0 0 0 15px;
+  box-sizing: border-box; }
+  @media (min-width: 64em) {
+    .originalWord {
+      width: 25%;
+      border: none;
+      padding: 0 0 0 15px;
+      font-size: 1.5em; } }
 
 .translation {
-  width: calc(75% - 2px);
-  display: table;
-  font-size: 1.5em;
-  line-height: 2.5em; }
+  width: 100%;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+  font-style: italic;
+  color: #949494; }
+  @media (min-width: 64em) {
+    .translation {
+      width: 75%;
+      font-size: 1em; } }
 
 /*# sourceMappingURL=swStyle.css.map */
