@@ -1,13 +1,27 @@
 // COLORS:
 $red: #ff0000;
 $black: #000000;
+$midGray: #949494;
+$lightGrey: #d0d0d0;
 $blue: #0000ff;
 
 // BORDERS:
 $border--red: 1px solid $red;
 $border--black: 1px solid $black;
+$border--lightGrey: 1px solid $lightGrey;
 
 // BREACKPOINT
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 64em) { @content ; }
+ }
+ @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
 
-$minima: '(max-width: 600px)';
-$maxima: '(min-width: 1024px)';
+ }
+}
+
+// typography
+$baseFont: 16px;
+
+// SPACER, DIVIDER, MARGIN, PADDING

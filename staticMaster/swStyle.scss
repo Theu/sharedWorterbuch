@@ -6,7 +6,7 @@ body {
   padding: 0px;
   line-height: 1;
   font-family: Arial;
-  font-size: 16px;
+  font-size: $baseFont;
 }
 
 .wrapper {
@@ -36,31 +36,39 @@ h1 {
   font-size: 10vw;
   font-weight: 400;
   color: blue;
-  @media #{$maxima} {
+  @include breakpoint(desktop) {
     font-size: 6em;
     color: $blue;
   }
 }
 
 .letters {
-  width: 10%;
-  flex: 1;
-  // order: 1;
-  padding: 0px;
-  margin: 0px;
+  width: 20%;
+@include breakpoint(desktop) {
+    width: 10%;
+    flex: 1;
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
-.letter {
-  width: 100%;
-  font-size: 1em;
-  line-height: 2em;
-  border-bottom: $border--black;
-  border-left: $border--black;
-  text-align: center;
-}
+    .letter {
+      width: 100%;
+      font-size: 1em;
+      line-height: 2em;
+      border-bottom: $border--black;
+      border-left: $border--black;
+      text-align: center;
+    }
+
+    .letter:hover {
+      font-size: 2em;
+      font-weight: 900;
+    }
 
 .mainSection {
-  width: calc(90% - 2px);
+  width: 80%;
+  box-sizing: border-box;
   order: 2;
   display: -webkit-flex;
   display: flex;
@@ -73,7 +81,9 @@ h1 {
   border-right: $border--red;
   border-bottom: $border--red;
   border-left: $border--red;
-
+  @include breakpoint(desktop) {
+    width: 90%;
+  }
 }
 
 .letterHead {
@@ -90,27 +100,39 @@ h1 {
 
 .singleWord {
   width: 100%;
-  min-height: 4.05em;
+  min-height: 1em;
   flex: 1 100%;
   width: 100%;
   order: 2;
   display: table-row;
   display: flex;
   flex-flow: row wrap;
+  line-height: 2.5em;
   border-bottom: $border--black;
 }
 
 
 .originalWord {
-  width: calc(25% - 2px);
-  display: table;
-  font-size: 1.5em;
-  line-height: 2.5em;
+  border-bottom: $border--lightGrey;
+  width: 100%;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+  @include breakpoint(desktop) {
+    width: 25%;
+    border: none;
+    padding: 0 0 0 15px;
+    font-size: 1.5em;
+  }
 }
 
 .translation {
-  width: calc(75% - 2px);
-  display: table;
-  font-size: 1.5em;
-  line-height: 2.5em;
+  width: 100%;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+  font-style: italic;
+  color: $midGray;
+  @include breakpoint(desktop) {
+    width: 75%;
+    font-size: 1em;
+  }
 }
