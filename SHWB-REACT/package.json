@@ -1,0 +1,32 @@
+{
+  "name": "shwb-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "webpack",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Theu/sharedWorterbuch.git"
+  },
+  "author": "Matteo Contini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Theu/sharedWorterbuch/issues"
+  },
+  "homepage": "https://github.com/Theu/sharedWorterbuch#readme",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.15.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "webpack": "^2.5.0",
+    "webpack-dev-middleware": "^1.10.2"
+  }
+}
